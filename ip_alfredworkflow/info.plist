@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.custom.ip138</string>
+	<key>connections</key>
+	<dict>
+		<key>020B62FD-6BAC-43C1-86DE-F4ECD46F4DD5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DDDD4871-C118-4C64-BE19-724226B54E3B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DDDD4871-C118-4C64-BE19-724226B54E3B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>NOTIFICATION_UID</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Custom</string>
+	<key>description</key>
+	<string>IP 地址归属地查询工具，使用 ip-api.com 免费 API</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>IP Location (ip138)</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>ip</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>查询中...</string>
+				<key>script</key>
+				<string>./ip138.sh "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>IP 地址归属地查询工具</string>
+				<key>title</key>
+				<string>IP Location</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>020B62FD-6BAC-43C1-86DE-F4ECD46F4DD5</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>DDDD4871-C118-4C64-BE19-724226B54E3B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>已复制到剪贴板</string>
+				<key>title</key>
+				<string>复制成功</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>19A26DF9-DE91-4B04-A47F-A07C31348FFD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>IP 地址归属地查询工具
+
+使用方法：
+1. 输入 `ip` 查看外网 IP 及其归属地
+2. 输入 `ip 8.8.8.8` 查询指定 IP 的归属地
+3. 选择结果后按 Enter 复制 IP 地址
+
+功能：
+- 自动获取外网 IP 地址
+- 查询 IP 归属地信息（国家、地区、城市、ISP）
+- 支持查询任意 IP 地址的归属地
+
+API: 使用 ip-api.com 免费服务（45次/分钟限制）
+
+参考项目: https://github.com/hellosa/ip138-alfredworkflow
+</string>
+	<key>uidata</key>
+	<dict>
+		<key>020B62FD-6BAC-43C1-86DE-F4ECD46F4DD5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>80</integer>
+		</dict>
+		<key>DDDD4871-C118-4C64-BE19-724226B54E3B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<integer>210</integer>
+		</dict>
+		<key>19A26DF9-DE91-4B04-A47F-A07C31348FFD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>885</integer>
+			<key>ypos</key>
+			<integer>210</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+</dict>
+</plist>
+
